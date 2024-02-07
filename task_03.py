@@ -20,7 +20,7 @@ def calling_functions(function_number, number):
 
 
 def mirror_number(number):
-    return "mirror number : " + number[::-1]
+    return f"mirror number : {number[::-1]}"
 
 
 def sum_of_all_numbers(number):
@@ -30,15 +30,15 @@ def sum_of_all_numbers(number):
     for num in number_list:
         if num.isnumeric():
             num_list.append(int(num))
-    return sum(num_list)
+    return f"sum number : {sum(num_list)}"
 
 
 def number_len(number):
-    return "number len : " + str(len(number))
+    return f"number len : {len(number)}"
 
 
 def number_squared(number):
-    return int(number) ** 2
+    return f"square of the number : {int(number) ** 2}"
 
 
 print(calling_functions(function_selection, user_input))
