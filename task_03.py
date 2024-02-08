@@ -28,10 +28,10 @@ def func_switch(function_number, input_value):
         case 4:
             return f"square of the number is: {square(input_value)}"
         case _:
-            return "invalid function number"
+            return f"invalid function number : {function_number}"
 
 
-print("\n\nTask_03\n\n")
+print("\nTask_03\n")
 
 user_input = input("Enter a number: ")
 print('''Enter a function number from 1 to 4 :

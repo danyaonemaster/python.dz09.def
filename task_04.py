@@ -50,6 +50,13 @@ def func_switch(function_number: int):
             return f"invalid function number: {function_number}"
 
 
-print("\n\nTask_04\n\n")
-function_selection = int(input("Enter a function number from 1 to 5 : "))
+print("\nTask_04\n")
+print("""Enter a function number from 1 to 5 : 
+1 - cube volume
+2 - cylinder volume
+3 - sphere volume
+4 - pyramid volume
+5 - cone volume
+""")
+function_selection = int(input())
 print(func_switch(function_selection))
