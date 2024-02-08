@@ -1,10 +1,5 @@
-print("\n\nTask_02\n\n")
+def text_len(text):
+    return f"the text length is {len(text)}"
 
 
-def user_len_text(text):
-    return len(text)
-
-
-user_input = input("Enter a text: ")
-
-print(f"\ntext len :{user_len_text(user_input)}")
+print(text_len(input("\n\nTask_02\n\nEnter a text: ")))

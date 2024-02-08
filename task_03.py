@@ -1,45 +1,45 @@
 import re
 
-print("\n\nTask_03\n\n")
+
+def mirror_str(input_str: str):
+    return input_str[::-1]
 
 
-def mirror_number(number):
-    return number[::-1]
+def sum_all(input_str: str):
+    return sum(int(i) for i in input_str if i.isnumeric())
 
 
-def sum_of_all_numbers(number):
-    num_list = []
-
-    for num in number:
-        if num.isnumeric():
-            num_list.append(int(num))
-
-    return sum(num_list)
+def my_len(input_str: str):
+    return len(input_str)
 
 
-def number_len(number):
-    return len(number)
+def square(input_str: str):
+    return int(input_str) ** 2
 
 
-def number_squared(number):
-    return int(number) ** 2
-
-
-def calling_functions(function_number, number):
+def func_switch(function_number, input_value):
     match function_number:
         case 1:
-            return f"mirror number : {mirror_number(number)}"
+            return f"mirrored number is: {mirror_str(input_value)}"
         case 2:
-            return f"sum number : {sum_of_all_numbers(number)}"
+            return f"sum of numbers digits is : {sum_all(input_value)}"
         case 3:
-            return f"number len : {number_len(number)}"
+            return f"input len is: {my_len(input_value)}"
         case 4:
-            return f"square of the number : {number_squared(number)}"
+            return f"square of the number is: {square(input_value)}"
         case _:
-            return "invalid function"
+            return "invalid function number"
 
+
+print("\n\nTask_03\n\n")
 
 user_input = input("Enter a number: ")
-function_selection = int(input("Enter a function number from 1 to 4 : "))
+print('''Enter a function number from 1 to 4 :
+1 - marrow input
+2 - sum all input digits
+3 - input len
+4 - square number
+''')
+function_selection = int(input())
 
-print(calling_functions(function_selection, user_input))
+print(func_switch(function_selection, user_input))

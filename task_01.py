@@ -1,14 +1,5 @@
-print("Task_01\n\n")
-
-
 def number_odd_even(num):
-    match num % 2 == 0:
-        case 1:
-            return "is number even"
-        case _:
-            return "is number odd"
+    return "number is even" if num % 2 == 0 else "number is odd"
 
 
-user_input = int(input("Enter a number: "))
-
-print(number_odd_even(user_input))
+print(number_odd_even(int(input("Task_01\n\nEnter a number: "))))
